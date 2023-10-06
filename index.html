@@ -1,303 +1,257 @@
+[10:55] Mohapatra, Satyabrata
+
 <!DOCTYPE html>
+
 <html lang="en">
 
- 
-
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sample HTML Code - NewsLetter Form</title>
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
- 
+    <meta charset="UTF-8">
 
-    body {
-      display: flex;
-      justify-content: center;
-      padding: 3rem 0;
-      font-family: "Poppins", sans-serif;
-      font-size: 1rem;
-      color: white;
-      background-color: #ff7a7a;
-    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    main {
-      max-width: 350px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    <style>
 
- 
+        /* CSS styles */
 
-    .intro {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-      margin-bottom: 3rem;
-    }
+        body {
 
- 
+            background: linear-gradient(45deg, #FF5733, #FFBD33, #FF5733, #33FF57, #33FFBD, #5733FF, #BD33FF, #57FF33);
 
-    .title {
-      padding: 1rem;
-      font-size: 1.75rem;
-    }
+            background-size: 400% 400%;
 
- 
+            animation: gradient 10s linear infinite;
 
-    .sign-up {
-      width: 100%;
-    }
+            font-family: Arial, sans-serif;
 
- 
+            display: flex;
 
-    .sign-up-para {
-      padding: 1rem 5rem;
-      margin-bottom: 1.75rem;
-      border-radius: 0.8rem;
-      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
-      background-color: #7138cc;
-      text-align: center;
-    }
+            flex-direction: column;
 
- 
+            align-items: center;
 
-    .sign-up-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.2rem;
-      border-radius: 0.8rem;
-      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
-      color: #b9b6d3;
-      background-color: white;
-    }
+            justify-content: center;
 
- 
+            height: 100vh;
 
-    .form-input {
-      width: 100%;
-      margin-bottom: 1em;
-      position: relative;
-    }
+            margin: 0;
 
- 
+        }
 
-    .form-input span {
-      position: absolute;
-      top: 10%;
-      right: 0;
-      padding: 0 0.65em;
-      border-radius: 50%;
-      background-color: #ff7a7a;
-      color: white;
-      display: none;
-    }
 
- 
+        h1 {
 
-    .form-input.warning span {
-      display: inline-block;
-    }
+            color: #ffffff;
 
- 
+            font-size: 2rem;
 
-    .form-input input {
-      width: calc(100% - 20px);
-      padding: 10px;
-      border: 2px solid rgba(185, 182, 211, 0.25);
-      border-radius: 0.5em;
-      font-weight: 600;
-      color: #3e3c49;
-    }
+            margin-bottom: 20px;
 
- 
+        }
 
-    .form-input input:focus {
-      outline: none;
-      border: 2px solid #b9b6d3;
-    }
 
- 
+        .inputBox {
 
-    .form-input.warning input {
-      border: 2px solid #ff7a7a;
-    }
+            background: rgba(255, 255, 255, 0.9);
 
- 
+            border-radius: 10px;
 
-    .form-input p {
-      margin: 0.2em 0.75em 0 0;
-      display: none;
-      font-size: 0.75rem;
-      text-align: right;
-      font-style: italic;
-      color: #ff7a7a;
-    }
+            padding: 10px;
 
- 
+            text-align: center;
 
-    .form-input.warning p {
-      display: block;
-    }
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
- 
+        }
 
-    .submit-btn {
-      cursor: pointer;
-      width: 100%;
-      padding: 1em;
-      margin-bottom: 1em;
-      border: none;
-      border-bottom: 5px solid #31bf81;
-      border-radius: 0.5em;
-      background-color: #38cc8c;
-      color: white;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
 
- 
+        input[type="text"] {
 
-    .submit-btn:hover {
-      background-color: #5dd5a1;
-    }
+            width: 100%;
 
- 
+            padding: 10px;
 
-    .form-term {
-      margin-bottom: 0.75em;
-      font-size: 0.8rem;
-      text-align: center;
-    }
+            font-size: 1.2rem;
 
- 
+            border: none;
 
-    .form-term span {
-      font-weight: 700;
-      color: #ff7a7a;
-    }
+            border-radius: 5px;
 
-    @media (min-width: 768px) {
-      body {
-        align-items: center;
-        min-height: 100vh;
-      }
+            margin: 10px 0;
 
- 
+            outline: none;
 
-      main {
-        max-width: 100vw;
-        flex-direction: row;
-        justify-content: center;
-      }
+        }
 
- 
 
-      .intro {
-        align-items: flex-start;
-        text-align: left;
-        width: 45%;
-        margin-right: 1rem;
-      }
+        #btn {
 
- 
+            background-color: #333;
 
-      .title {
-        padding: 0;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        line-height: 1.25em;
-      }
+            color: white;
 
- 
+            padding: 10px 20px;
 
-      .sign-up {
-        width: 45%;
-      }
+            font-size: 1.2rem;
 
- 
+            border: none;
 
-      .sign-up-form {
-        padding: 1.75rem;
-      }
+            border-radius: 5px;
 
- 
+            cursor: pointer;
 
-      .sign-up-form input {
-        padding-left: 1.5em;
-      }
-    }
-</style>
+            transition: background-color 0.3s;
+
+        }
+
+
+        #btn:hover {
+
+            background-color: #1e8e3e;
+
+        }
+
+
+        footer {
+
+            margin-top: 20px;
+
+            text-align: center;
+
+            color: #cccccc;
+
+        }
+
+
+        footer a {
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+        }
+
+
+        @keyframes gradient {
+
+            0% {
+
+                background-position: 0% 50%;
+
+            }
+
+            100% {
+
+                background-position: 100% 50%;
+
+            }
+
+        }
+
+    </style>
+
+    <script>
+
+        // JavaScript code (same as before)
+
+        const words = ['seat', 'pen', 'broad', 'vapor', 'ocean',
+
+            'red', 'plate', 'late', 'that', 'ring', 'swim', 'shown',
+
+            'path', 'law', 'list', 'hard', 'plate', 'block', 'two',
+
+            'pupil', 'were', 'lot', 'pay', 'would', 'tired', 'dull',
+
+            'mud', 'sky', 'grew', 'hard', 'ill', 'frame',
+
+            'sport', 'did', 'many', 'been', 'page', 'year', 'trail',
+
+            'earth', 'are', 'while', 'off', 'town', 'doing', 'size',
+
+            'steel', 'sale', 'swam', 'put', 'zero', 'week', 'mill',
+
+            'past', 'aside', 'her', 'cent', 'box', 'fuel', 'block',
+
+            'those', 'late', 'sun', 'map', 'silk', 'lady', 'meant',
+
+            'still', 'shine', 'range', 'loud', 'fox', 'gate', 'slide',
+
+            'each', 'nails', 'flag', 'exist', 'door', 'luck', 'down',
+
+            'poem', 'depth', 'press', 'crowd', 'herd', 'drink', 'worry',
+
+            'dried', 'dig', 'new', 'rest', 'play', 'win', 'strong'];
+
+
+        function getPassword() {
+
+            const chars = '0123456789!@#$%&';
+
+            const clength = chars.length;
+
+            let password = '';
+
+
+            while (password.length < 16) {
+
+                password += randomWord() + chars.charAt(randomNumber(clength));
+
+            }
+
+
+            document.getElementById('password').value = password;
+
+        }
+
+
+        function randomNumber(l) {
+
+            return Math.floor(Math.random() * l);
+
+        }
+
+
+        function randomWord() {
+
+            const number = randomNumber(words.length);
+
+            return words[number];
+
+        }
+
+    </script>
+
+    <title>Random Password Generator</title>
+
 </head>
 
- 
-
 <body>
-<main>
-<!-- intro section -->
-<section class="intro">
-<h1 class="title">superb Deals</h1>
-<p>Get up to 50% off on all our products and services. Hurry up, the offer ends in 24 hours.</p>
-</section>
 
- 
+    <!-- HTML content (same as before) -->
 
-    <!-- sign-up section -->
-<section class="sign-up">
-<p class="sign-up-para">Sign up for our newsletter and get 10% off your first purchase</p>
-<!-- the form itself -->
-<form class="sign-up-form">
-<div class="form-input">
-<input type="text" name="first-name" id="first-name" placeholder="First Name" required>
-<span>!</span>
-<p class="warning">First name cannot be empty</p>
-</div>
+    <h1>Random Password Generator</h1>
 
- 
+    <div class="inputBox">
 
-        <div class="form-input">
-<input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
-<span>!</span>
-<p class="warning">Last name cannot be empty</p>
-</div>
+        <input type="text" name="" placeholder="Your Secure Password" id="password" readonly>
 
- 
+    </div>
 
-        <div class="form-input">
-<input type="email" name="email" id="email" placeholder="Email Address" required>
-<span>!</span>
-<p class="warning">Looks like this is not an email</p>
-</div>
+    <button id="btn" onclick="getPassword();">Generate Password</button>
 
- 
 
-        <div class="form-input">
-<input type="Password" name="Password" id="Password" placeholder="Password" required>
-<span>!</span>
-<p class="warning">Password cannot be empty</p>
-</div>
+    <footer>
 
- 
+        Made with ❤️ by <a href="https://swapnilsparsh.github.io/" target="_blank">SATYABRATA MOHAPATRA</a><br>
 
-        <input class="submit-btn" type="submit" value="Claim your offer">
-<p class="form-term">By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
-</form>
-</section>
-</main>
+        <a href="https://github.com/swapnilsparsh/30DaysOfJavaScript" target="_blank">WEB APPLICATION</a>
+
+    </footer>
+
 </body>
-
- 
 
 </html>
 
-
-
+SATYABRATA MOHAPATRA
